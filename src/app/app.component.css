@@ -1,0 +1,5 @@
+.hr {
+  border: 2px solid rgb(21, 87, 104);
+  margin-inline: 10px;
+  border-radius: 50%;
+}
