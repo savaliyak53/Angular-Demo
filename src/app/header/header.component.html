@@ -1,13 +1,30 @@
 <nav class="nav">
   <h1>E-COMM</h1>
-  <div class="nav-search">
+  <button *ngIf="exclusive" class="exclusive">
+    Exclusive (example of subject)
+  </button>
+  <div *ngIf="menutype === 'default'" class="nav-search">
     <input type="text" placeholder="Search for product " />
     <button type="button" title="search">Search</button>
   </div>
-  <ul>
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/seller">Seller</a></li>
-    <li><a routerLink="login">Login</a></li>
-    <li><a routerLink="cart">Cart(0)</a></li>
-  </ul>
+  <div [ngSwitch]="menutype">
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="/home">Home</a></li>
+      <li>|</li>
+      <li><a routerLink="/seller">Seller</a></li>
+      <li>|</li>
+      <li><a routerLink="login">Login</a></li>
+      <li>|</li>
+      <li><a routerLink="cart">Cart(0)</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+      <li><a routerLink="/productlist">Product List</a></li>
+      <li>|</li>
+      <li><a routerLink="/seller">Add Product</a></li>
+      <li>|</li>
+      <li><a routerLink="logout">LogOut</a></li>
+      <li>|</li>
+      <li><a routerLink="cart">Seller Name</a></li>
+    </ul>
+  </div>
 </nav>

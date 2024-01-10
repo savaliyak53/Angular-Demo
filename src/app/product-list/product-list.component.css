@@ -1,0 +1,7 @@
+.card {
+  width: 90%;
+  min-height: 500px;
+  background: rgb(152, 152, 243);
+  display: flex;
+  justify-content: space-around;
+}
