@@ -7,14 +7,21 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { authGuard } from './auth.guard';
 import { ProductListComponent } from './product-list/product-list.component';
-import internal from 'stream';
 import { IntervalComponent } from './interval/interval.component';
 import { OfComponent } from './of/of.component';
 import { ToarrayComponent } from './toarray/toarray.component';
-import { PluckComponent } from './pluck/pluck.component';
 import { TakeComponent } from './take/take.component';
 import { RetryWhenComponent } from './retry-when/retry-when.component';
-import { SubjectComponent } from './subject/subject.component';
+import { SubjectComponent } from './Data_binding/subject.component';
+import { DirectiveComponent } from './directive/directive.component';
+import { DecoratoeComponent } from './decoratoe/decoratoe.component';
+import { TRVComponent } from './trv/trv.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
+import { ViewChildrenComponent } from './view-children/view-children.component';
+import { ContentChildComponent } from './content-child/content-child.component';
+import { HostBindingComponent } from './host-binding/host-binding.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { CreateCustomDirectiveComponent } from './create-custom-directive/create-custom-directive.component';
 
 export const routes: Routes = [
   {
@@ -56,6 +63,10 @@ export const routes: Routes = [
     component: TakeComponent,
   },
   {
+    path: 'directive',
+    component: DirectiveComponent,
+  },
+  {
     path: 'retrywhen',
     component: RetryWhenComponent,
   },
@@ -67,10 +78,43 @@ export const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
-
+  {
+    path: 'decorator',
+    component: DecoratoeComponent,
+  },
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'trv',
+    component: TRVComponent,
+  },
+  {
+    path: 'viewchild',
+    component: ViewchildComponent,
+  },
+  {
+    path: 'viewchildren',
+    component: ViewChildrenComponent,
+  },
+  {
+    path: 'contentchild',
+    component: ContentChildComponent,
+  },
+
+  {
+    path: 'hostbinding',
+    component: HostBindingComponent,
+  },
+  {
+    path: 'pipe',
+    component: PipeComponent,
+  },
+
+  {
+    path: 'createCustomDirective',
+    component: CreateCustomDirectiveComponent,
   },
   {
     path: '**',

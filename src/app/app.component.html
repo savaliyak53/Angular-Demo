@@ -1,5 +1,11 @@
 <div>
   <app-header></app-header>
+  <app-decoratoe
+    [useAlias]="data"
+    (outData)="recieveOutData($event)"
+    [childFunction]="parentFunction"
+  ></app-decoratoe>
+  <h1>{{ outPutData }}</h1>
   <hr class="hr" />
   <router-outlet></router-outlet>
 </div>

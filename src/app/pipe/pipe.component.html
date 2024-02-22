@@ -1,0 +1,21 @@
+<h1>Pipe</h1>
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Surname</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age | age : user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.location }}</td>
+    </tr>
+  </tbody>
+</table>

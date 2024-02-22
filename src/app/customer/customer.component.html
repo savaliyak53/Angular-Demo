@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <th>{{ customer.name }}</th>
+      <th>{{ customer.email }}</th>
+      <th>{{ customer.address }}</th>
+      <th>{{ customer.phone }}</th>
+      <th>{{ customer.age }}</th>
+      <th><button (click)="user = customer">Select</button></th>
+    </tr>
+  </tbody>
+</table>

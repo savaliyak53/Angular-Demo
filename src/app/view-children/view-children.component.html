@@ -1,0 +1,13 @@
+<h1>view-children works!</h1>
+<h3>This is return list of element</h3>
+
+<div>
+  <input type="text" placeholder="first name" #inputEle />
+  <br /><br />
+  <input type="text" placeholder="middle name" #inputEle />
+  <br /><br />
+  <input type="text" placeholder="last name" #inputEle />
+  <br /><br />
+  <button (click)="show()">Show full name</button>
+  <h3>{{ fullName }}</h3>
+</div>

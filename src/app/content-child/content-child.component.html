@@ -1,0 +1,50 @@
+<h1>Contentchild and ContentChildren</h1>
+<p>Contentchild and contentChildern just like viewchild and viewChildren</p>
+<p>but both can access parent dom</p>
+<h2>Difference between ContentChild & ViewChild(google for children)</h2>
+<div>
+  <h4>ContentChild</h4>
+  <ul>
+    <li>
+      Used to access the first instance of a directive or component projected
+      into the component's content.
+    </li>
+    <li>
+      Works with elements or components that are projected into the component
+      using. <ng-content></ng-content>
+    </li>
+    <li>Allows access to content projected into the component's template.</li>
+    <li>
+      Useful when you need to interact with content projected into a component.
+    </li>
+    <li>
+      Typically used in parent components to access elements or components
+      projected into child components. Example: Accessing a specific element or
+      component projected into a modal component's content area.
+    </li>
+  </ul>
+  <h4>ViewChild</h4>
+  <ul>
+    <li>
+      Used to access the first instance of a directive or component in the
+      component's view.
+    </li>
+    <li>
+      elements or components that are part of the component's template. Allows
+      access to child components or DOM elements within the component's
+      template.
+    </li>
+    <li>
+      Useful when you need to interact with child components or DOM elements
+      directly within the component.
+    </li>
+    <li>
+      Can be used in both parent and child components to access child components
+      or DOM elements
+    </li>
+    <li>
+      Example: Accessing a child component's properties or methods from the
+      parent component.
+    </li>
+  </ul>
+</div>
