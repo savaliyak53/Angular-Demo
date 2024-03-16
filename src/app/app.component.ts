@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { SellerService } from './services/seller.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DecoratoeComponent } from './decoratoe/decoratoe.component';
+import { AttributeDirectiveDirective } from './CustomDirective/customAttributeDirective/attribute-directive.directive';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { DecoratoeComponent } from './decoratoe/decoratoe.component';
     RouterOutlet,
     HeaderComponent,
     RouterLink,
+    AttributeDirectiveDirective,
     RouterLinkActive,
     HttpClientModule,
     DecoratoeComponent,

@@ -22,6 +22,9 @@ import { ContentChildComponent } from './content-child/content-child.component';
 import { HostBindingComponent } from './host-binding/host-binding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { CreateCustomDirectiveComponent } from './create-custom-directive/create-custom-directive.component';
+import { ViewEncapsulationComponent } from './viewEncapsulation/view-encapsulation/view-encapsulation.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 export const routes: Routes = [
   {
@@ -115,6 +118,18 @@ export const routes: Routes = [
   {
     path: 'createCustomDirective',
     component: CreateCustomDirectiveComponent,
+  },
+  {
+    path: 'viewen',
+    component: ViewEncapsulationComponent,
+  },
+  {
+    path: 'ngContent',
+    component: NgContentComponent,
+  },
+  {
+    path: 'lifecycle',
+    component: LifecycleComponent,
   },
   {
     path: '**',

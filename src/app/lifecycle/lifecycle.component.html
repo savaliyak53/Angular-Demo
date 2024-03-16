@@ -1,0 +1,5 @@
+<h1>lifecycle works!</h1>
+<input type="text" placeholder="Ng on change" (change)="inputChange($event)" />
+<app-child-cycle [onchange]="inputData">
+  <h2>This is projected content {{ inputData }}</h2>
+</app-child-cycle>
