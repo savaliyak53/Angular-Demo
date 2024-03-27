@@ -7,15 +7,35 @@
       <th>Age</th>
       <th>Surname</th>
       <th>Location</th>
+      <th>Date</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.name }}</td>
+      <td>{{ user.id | percent : "2.2-5" }}</td>
+      <td>{{ user.name | uppercase }}</td>
       <td>{{ user.age | age : user.name }}</td>
-      <td>{{ user.surname }}</td>
+      <td>{{ user.surname | lowercase }}</td>
       <td>{{ user.location }}</td>
+      <td>{{ date | date : "longDate" }}</td>
     </tr>
   </tbody>
 </table>
+<hr />
+<h2>In build pipe</h2>
+<ul>
+  <li>DatePipe</li>
+  <li>UpperCasePipe | LowerCasePipe</li>
+  <li>CurrencyPipe</li>
+  <li>DecimalPipe</li>
+  <li>PercentPipe</li>
+  <li>JsonPipe</li>
+  <li>CurrencyPipe</li>
+  <li>AsyncPipe</li>
+  <li>SlicePipe</li>
+  <li>TitleCasePipe</li>
+  <li>KeyValuePipe</li>
+</ul>
+
+<h2>In aync pipe</h2>
+<div>{{ totalSubmit | async }}</div>

@@ -1,0 +1,18 @@
+<h1>Signals</h1>
+<hr />
+<div>
+  <button (click)="decrement()">-</button>
+  <span>{{ counter() }}</span>
+  <button (click)="increment()">+</button>
+</div>
+
+<div>
+  <span *ngFor="let mes of message()">
+    <p>{{ mes }}</p>
+  </span>
+</div>
+
+<div>
+  <h2>Computed method</h2>
+  <p>{{ doubleCounter() }}</p>
+</div>

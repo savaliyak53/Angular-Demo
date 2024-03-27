@@ -1,7 +1,7 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: 'display',
+  selector: 'displayCustomDirective',
   standalone: true,
 })
 export class IfCustomDirective {
@@ -12,7 +12,7 @@ export class IfCustomDirective {
     private viewContainer: ViewContainerRef
   ) {}
 
-  @Input() set display(condition: boolean) {
+  @Input() set displayCustomDirective(condition: boolean) {
     if (condition) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {

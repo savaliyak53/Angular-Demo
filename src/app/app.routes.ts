@@ -25,6 +25,9 @@ import { CreateCustomDirectiveComponent } from './create-custom-directive/create
 import { ViewEncapsulationComponent } from './viewEncapsulation/view-encapsulation/view-encapsulation.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { SignalsComponent } from './signals/signals/signals.component';
+import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
+import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 
 export const routes: Routes = [
   {
@@ -124,12 +127,24 @@ export const routes: Routes = [
     component: ViewEncapsulationComponent,
   },
   {
+    path: 'ngcontainer',
+    component: NgcontainerComponent,
+  },
+  {
     path: 'ngContent',
     component: NgContentComponent,
   },
   {
+    path: 'ngtemplate',
+    component: NgtemplateComponent,
+  },
+  {
     path: 'lifecycle',
     component: LifecycleComponent,
+  },
+  {
+    path: 'signals',
+    component: SignalsComponent,
   },
   {
     path: '**',

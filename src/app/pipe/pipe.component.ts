@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 // user.interface.ts
 export class PipeComponent {
   users: User[] = [];
+  date = new Date();
 
   ngOnInit(): void {
     // Sample user data
@@ -29,4 +30,10 @@ export class PipeComponent {
       { id: 3, name: 'Bob', age: 35, surname: 'Johnson', location: 'Chicago' },
     ];
   }
+
+  totalSubmit = new Promise((resolve, rejection) => {
+    setTimeout(() => {
+      resolve(this.users.length);
+    }, 2000);
+  });
 }
