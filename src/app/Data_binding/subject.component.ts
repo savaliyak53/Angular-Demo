@@ -25,7 +25,6 @@ export class SubjectComponent implements OnInit, OnDestroy {
   handleClick() {
     console.log(this.search);
     this.password = this.search;
-    console.log('click');
   }
 
   ngOnInit(): void {

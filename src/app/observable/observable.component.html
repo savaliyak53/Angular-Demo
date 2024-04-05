@@ -1,0 +1,14 @@
+<h1>Observable</h1>
+<button (click)="getAsyncData()">Click for subscribe</button>
+<div *ngIf="data">
+  <ul *ngFor="let i of data">
+    <li>{{ i }}</li>
+  </ul>
+</div>
+
+<button (click)="getAsync()">Click for Push,error</button>
+<div *ngIf="data2">
+  <ul *ngFor="let i of data2">
+    <li>{{ i }}</li>
+  </ul>
+</div>

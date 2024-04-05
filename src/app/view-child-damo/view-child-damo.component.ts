@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './view-child-damo.component.css',
 })
 export class ViewChildDamoComponent {
+  formChild = 'This section comes from child component';
   count: number = 0;
   sayHello() {
     this.count += 1;

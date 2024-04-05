@@ -1,10 +1,10 @@
 <h1>Templates Reference Variable</h1>
 <h3>Example 1</h3>
-
-<input type="text" #myVariable (keyup)="(0)" />
-<button (click)="sayHello(myVariable)">Say Hello</button>
-<h3>{{ myVariable.value }}</h3>
+<input type="text" #myVar (keyup)="(0)" />
+<button (click)="sayHello(myVar)">Say Hello</button>
+<h3>{{ myVar.value }}</h3>
 
 <h3>Example 2</h3>
+<!-- HERE WE BIND WHOLE ELEMENT BY TRF Method -->
+<h2>{{ cust.user?.name }} {{ cust.user?.email }}</h2>
 <app-customer #cust></app-customer>
-<h2>{{ cust.user?.name }}</h2>

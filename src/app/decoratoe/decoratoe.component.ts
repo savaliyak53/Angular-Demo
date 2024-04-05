@@ -20,8 +20,19 @@ export class DecoratoeComponent {
 
   // Output Decoretor
   @Output() outData = new EventEmitter<string>();
+  isToggleOn = false;
 
   onOutPut = () => {
     this.outData.emit('DATA PASSING FROM CHILD TO PARENT');
+  };
+
+  onClick = () => {
+    if (this.isToggleOn) {
+      this.outData.emit('hello');
+      this.isToggleOn = false;
+    } else {
+      this.outData.emit();
+      this.isToggleOn = true;
+    }
   };
 }

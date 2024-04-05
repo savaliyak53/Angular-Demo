@@ -28,6 +28,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { SignalsComponent } from './signals/signals/signals.component';
 import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
+import { ObservableComponent } from './observable/observable.component';
 
 export const routes: Routes = [
   {
@@ -129,6 +130,10 @@ export const routes: Routes = [
   {
     path: 'ngcontainer',
     component: NgcontainerComponent,
+  },
+  {
+    path: 'observable',
+    component: ObservableComponent,
   },
   {
     path: 'ngContent',

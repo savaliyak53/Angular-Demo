@@ -15,7 +15,12 @@ export class ApphoverDirective {
   @HostBinding('style.backgroundColor') backGround: string = 'black';
   @HostBinding('style.color') textColor: string = 'white';
   @HostBinding('style.border') border: string = 'gray 5px solid';
+  @HostBinding('placeholder') text: string = '@HostBinding';
+  @HostBinding('value') value: string = 'WORKING';
 
+  @HostListener('focus') logic() {
+    console.log('you are focused on this');
+  }
   @HostListener('mouseenter') mouseEnter() {
     this.backGround = 'white';
     this.textColor = 'black';

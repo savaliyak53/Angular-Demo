@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Login, SignUp } from '../dataType';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 })
 export class SellerService {
   clienteUrl = 'https://dummyjson.com/products/1';
+
   constructor(private http: HttpClient, private router: Router) {}
 
   exclusive = new Subject<boolean>();

@@ -10,6 +10,11 @@ import { CustomerComponent } from '../customer/customer.component';
 })
 export class TRVComponent {
   sayHello(myVariableData: HTMLInputElement) {
-    alert('Hello ' + myVariableData.value);
+    if (myVariableData.value) {
+      alert('Hello ' + myVariableData.value);
+    } else {
+      myVariableData.focus();
+      alert('search something');
+    }
   }
 }

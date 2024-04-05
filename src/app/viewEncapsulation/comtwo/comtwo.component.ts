@@ -7,6 +7,6 @@ import { ComoneComponent } from '../comone/comone.component';
   imports: [],
   templateUrl: './comtwo.component.html',
   styleUrl: './comtwo.component.css',
-  encapsulation: ViewEncapsulation.ShadowDom,
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class ComtwoComponent {}

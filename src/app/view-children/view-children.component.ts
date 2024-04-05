@@ -1,4 +1,10 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  QueryList,
+  Renderer2,
+  ViewChildren,
+} from '@angular/core';
 
 @Component({
   selector: 'app-view-children',
@@ -10,10 +16,14 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 export class ViewChildrenComponent {
   @ViewChildren('inputEle') inputElement: QueryList<ElementRef> | undefined;
   fullName: string = '';
+  constructor(private renderer: Renderer2) {}
   show() {
     this.inputElement?.forEach((ele: ElementRef) => {
       this.fullName += ele.nativeElement.value + ' ';
     });
-    this.fullName.trim();
+    let h2Element = document.querySelector('#changeText');
+    if (h2Element) {
+      this.renderer.setProperty(h2Element, 'textContent', this.fullName);
+    }
   }
 }

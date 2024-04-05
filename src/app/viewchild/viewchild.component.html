@@ -1,6 +1,6 @@
 <h1>viewchild</h1>
 <h3>By this We can only access one element from dom</h3>
-<h3>Example</h3>
+<h3>Example 1</h3>
 <div>
   <label>DOB: </label>
   <input type="date" #dobInput (blur)="calculateDate()" />
@@ -10,7 +10,8 @@
   <input type=" text" #ageInput value="{{ age }}" />
 </div>
 
-<h3>Example</h3>
+<h3>Example 2</h3>
+<h3>{{ demoComp?.formChild }}</h3>
 <app-view-child-damo></app-view-child-damo>
 <button (click)="demoComp?.sayHello()">Click</button>
 <h3>{{ demoComp?.count }}</h3>
